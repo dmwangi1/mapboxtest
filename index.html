@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hello World Page</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <p>This is a simple "Hello World" example using HTML.</p>
-</body>
-    <!DOCTYPE html>
-<html>
-<head>
 <meta charset="utf-8">
 <title>Guides</title>
 <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -28,15 +19,15 @@ body { margin: 0; padding: 0; }
         container: 'map',
         style: 'mapbox://styles/mapbox/standard', // Use the standard style for the map
         projection: 'globe', // display the map as a globe
-        zoom: 1, // initial zoom level, 0 is the world view, higher values zoom in
-        center: [30, 15] // center the map on this longitude and latitude
+        zoom: 1, // initial zoom level
+        center: [30, 15] // center position
     });
 
     map.addControl(new mapboxgl.NavigationControl());
     map.scrollZoom.disable();
 
     map.on('style.load', () => {
-        map.setFog({}); // Set the default atmosphere style
+        map.setFog({});
     });
 </script>
 
